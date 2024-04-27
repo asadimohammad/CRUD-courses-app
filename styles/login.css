@@ -1,0 +1,54 @@
+main{
+    background-color: #2d3250;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+h2{
+    margin-bottom: 5%;
+}
+.login-frm{
+    width: 20%;
+    gap: 40px;
+}
+.login-frm input{
+    background-color: transparent;
+    border: none;
+}
+.login-frm input[type='text']{
+    border-bottom: 1px solid #cfcfcf;
+    padding: 3px;
+    color: #fff;
+    width: 80%;
+}
+.login-frm input[type='text']:focus{
+    outline: none;
+}
+.login-frm > div{
+    position: relative;
+    width: 100%;
+}
+.login-frm  label{
+    position: absolute;
+    right: 38px;
+    font-size: 13px;
+    bottom: 5px;
+    top: 0;
+    transition: .5s all;
+    color: #a1a1a1;
+
+}
+.login-frm input[type='text']:focus + label{
+    top: -18px;
+    transition: .5s all;
+}
+.login-frm input[type='submit'] {
+    background-color: #515a91;
+    color: #cfcfcf;
+    width: 80%;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.login-frm input[type='submit']:hover{
+    background-color: #414876;
+}

@@ -1,0 +1,144 @@
+:root {
+  --primary-c: #eef5ff;
+  --secondary-c: #2d3250;
+  --third-c: #7077a1;
+  --forth-c: #027b4f;
+  --orange-c: #fba834;
+}
+.header {
+  background-color: #716197;
+  height: 50px;
+  color: #fff;
+  padding: 15px 25px;
+}
+.header .profile img {
+  width: 40px;
+}
+.profile .name {
+  font-size: 13px;
+  margin: 0 15px;
+}
+.profile .name::before {
+  content: "<";
+  display: inline-block;
+  margin: 0 2px;
+  font-size: 10px;
+  rotate: 90deg;
+  color: #fba834;
+}
+
+.content {
+}
+.content .sidebar {
+  width: 20vw;
+  height: 100vh;
+  background-color: #11162a;
+  a {
+    color: #eef5ff;
+  }
+  .logo {
+    text-align: center;
+    border-bottom: 1px solid #fdfdfd;
+    padding: 10px;
+    img {
+      width: 50%;
+    }
+  }
+  .menu ul li {
+    padding: 15px;
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .menu ul li:hover {
+    background-color: #7077a1;
+  }
+}
+
+.main_content {
+  width: 80vw;
+  padding: 15px 25px;
+  .boxes {
+    .box {
+      width: fit-content;
+      background-color: #027b4f;
+      a {
+        padding: 10px 20px;
+        color: #fff;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .box:hover {
+      background-color: #7077a1;
+    }
+  }
+}
+
+.sub_content {
+  width: 100%;
+  margin: 20px auto;
+  .tbl_list_data {
+    text-align: center;
+    table {
+      width: 100%;
+      th,
+      td {
+        padding: 15px 25px;
+      }
+      thead {
+        background-color: #2d324b;
+        color: #fff;
+      }
+      tbody {
+        tr:nth-child(even) {
+          background-color: #321d63;
+          color: #fff;
+        }
+        tr:hover {
+          background-color: #716197af;
+          color: #fff;
+        }
+      }
+      .actions{
+        button{
+            padding: 6px 15px;
+            border: none;
+            font-size: 12px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .edit_user{
+            background-color: #046b37;
+        }
+        .delete_user{
+            background-color: #b50e0e;
+        }
+      }
+    }
+  }
+
+  .frm_add_data{
+    margin: 3rem 0;
+    form{
+        input , select{
+            padding: 10px 25px;
+            width: 25%;
+        }
+    }
+    input[type='submit']{
+        background-color: var(--orange-c);
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type='submit']:hover{
+        background-color: #714406;
+    }
+}
+}
+
+

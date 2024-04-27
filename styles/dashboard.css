@@ -138,5 +138,14 @@
     input[type="submit"]:hover {
       background-color: #714406;
     }
+    input[type="reset"] {
+      background-color: #e86969;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    input[type="reset"]:hover {
+      background-color: #702929;
+    }
   }
 }

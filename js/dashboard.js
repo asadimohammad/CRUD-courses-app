@@ -6,6 +6,7 @@ let btnListData = document.querySelector(".btn_list");
 
 let BASE_URL = "https://wins-api-v1.liara.run/api";
 let coursesArr = [];
+let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWUxZmVmMDg2YjczMTJjN2M0NDY1YTUiLCJlbWFpbCI6ImFzYWRpQGdtYWlsLmNvbSIsImlhdCI6MTcxNDIxODEzMSwiZXhwIjoxNzE0MjIxNzMxfQ.i-0jn1lq_mkK93Pln1b3y-pMhk3lY1YkY1isDVboTNI'
 
 eventListeners();
 function eventListeners() {
@@ -43,4 +44,28 @@ function showListData() {
 function addData() {
     tblCourses.style.display = 'none'
     frmAddCourses.style.display = 'block'
+    let saveBtn = frmAddCourses.querySelector('.btn-save-data')
+    saveBtn.addEventListener('click' , (e) => {
+        e.preventDefault()
+        let newCourse = {
+            title: frmAddCourses.querySelector('.title').value,
+            category: frmAddCourses.querySelector('.category').value,
+            level: frmAddCourses.querySelector('.level').value,
+            description: frmAddCourses.querySelector('.desc').value,
+            chapter: frmAddCourses.querySelector('.chapter').value,
+            duration: frmAddCourses.querySelector('.duration').value,
+            price: frmAddCourses.querySelector('.price').value,
+            coverImg: frmAddCourses.querySelector('.img').value,
+            createdAt: frmAddCourses.querySelector('.date').value,
+        }
+        console.log(newCourse);
+
+        fetch(BASE_URL + '/courses' , {
+            method: "POST",
+            body: JSON.stringify(newCourse),
+            headers:{
+                'Authorization' : `Bearer ${token}`
+            }
+        })
+    })
 }

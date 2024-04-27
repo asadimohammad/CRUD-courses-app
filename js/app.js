@@ -15,7 +15,7 @@ function getAllCourses() {
       coursesArr = res.courses;
       coursesArr.map((course) => {
         let courseTeme = `
-            <div class="course d-flex flex-col jc-sb">
+            <div class="course d-flex flex-col jc-sb" id=${course.id}>
             <img class="course_cover" src="./images/c1.jpeg" alt="" />
             <div class="content px-2 py-3 d-flex flex-col gap-4">
               <div class="title">${course.title}</div>

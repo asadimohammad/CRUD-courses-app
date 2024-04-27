@@ -21,7 +21,7 @@ function showListData() {
       coursesArr = res.courses;
       coursesArr.map((course) => {
         let tblTem = `
-        <tr>
+        <tr id=${course.id}>
             <td>${course.title}</td>
             <td>${course.category}</td>
             <td>${course.level}</td>
